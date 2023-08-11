@@ -8,7 +8,7 @@ if __name__ == "__main__":
     elif argc_len == 1:
         my_var = 'argument:'
     else:
-        my_var = 'argument:'
+        my_var = 'arguments:'
     count = 1
     print("{} {}".format(argc_len, my_var))
     for i in sys.argv[1:]:
