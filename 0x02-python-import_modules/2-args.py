@@ -12,5 +12,5 @@ if __name__ == "__main__":
     count = 1
     print("{} {}".format(argc_len, my_var))
     for i in sys.argv[1:]:
-        print("{} {}".format(count, i))
+        print("{}: {}".format(count, i))
         count += 1
