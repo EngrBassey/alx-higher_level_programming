@@ -4,11 +4,11 @@
 
 void print_python_list_info(PyObject *p);
 
-/** print_python_list_info - Print info about C python list represnation
- * @p: The python object struct
- *
- * Return: void
+/**
+ * print_python_list_info - Print info about Cpython
+ * @p: Object
  */
+
 void print_python_list_info(PyObject *p)
 {
 	PyListObject *listobj = (PyListObject *) p;
