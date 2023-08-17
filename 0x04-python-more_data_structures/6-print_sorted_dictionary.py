@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-    sorted_dic = sorted(a_dictionary.keys())
+def print_sorted_dictionary(a_dictionary):
+    sorted_dic = sorted(a_dictionary.items(), key=lambda x:x[0])
 
-    for key in sorted_dic:
-        print("{}: {}".format(key, a_dictionary[key]))
+    for key, va in sorted_dic:
+        print("{}: {}".format(key, va))
