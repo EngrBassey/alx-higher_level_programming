@@ -4,6 +4,6 @@
 
 class Square:
     """An empty block"""
-    def __init__(self, name):
+    def __init__(self, size):
         """Intance Atribute"""
-        self.__name = name
+        self.__size = size
