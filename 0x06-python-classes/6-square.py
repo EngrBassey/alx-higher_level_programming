@@ -33,16 +33,18 @@ class Square:
     @position.setter
     def position(self, value):
         """Intance Atribute"""
-        if (not isinstance(value, tuple) or len(value) != 2 or
-                not all(isinstance(v, int) and v >= 0 for v in value)):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
 
     """Intance func"""
     def area(self):
         """area instance func"""
-        return self.__size **  2
-        """my_print func"""
+        return self.__size ** 2
+    """my_print func"""
     def my_print(self):
         """my_print intance"""
         if self.__size == 0:
