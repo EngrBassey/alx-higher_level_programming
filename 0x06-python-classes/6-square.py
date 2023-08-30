@@ -13,9 +13,12 @@ class Square:
     def size(self):
         """gitter func"""
         return self.__size
+
+    """Gitter property"""
     @property
     def position(self):
         return self.__position
+
     """setter property"""
     @size.setter
     def size(self, value):
@@ -25,6 +28,7 @@ class Square:
         elif value < 0:
             raise ValueError('size must be >= 0')
         self.__size = value
+
     """Setter property"""
     @position.setter
     def position(self, value):
