@@ -18,7 +18,6 @@ class Rectangle:
         """
 
         type(self).number_of_instances += 1
-        
         if not isinstance(width, int):
             raise TypeError('width must be an integer')
         if width < 0:
@@ -73,7 +72,7 @@ class Rectangle:
             if i != self.__height - 1:
                 results.append('\n')
         return (''.join(results))
-        
+
     def __repr__(self):
         rect = "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
         return rect
