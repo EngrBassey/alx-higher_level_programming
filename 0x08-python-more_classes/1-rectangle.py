@@ -5,7 +5,14 @@
 
 class Rectangle:
     """function rep"""
+
     def __init__(self, width=0, height=0):
+        """Initialize a new Rectangle.
+
+        Args:
+            width (init): The width of the new rectangle
+            height (init): The height of the new rectangle
+        """
         self._width = width
         self._height = height
 
