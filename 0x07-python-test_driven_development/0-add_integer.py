@@ -1,4 +1,8 @@
+#!/usr/bin/python3
+
 """ add Funn """
+
+
 def add_integer(a, b=98):
     """ functions that add """
     if not (isinstance(a, float) or isinstance(a, int)):
