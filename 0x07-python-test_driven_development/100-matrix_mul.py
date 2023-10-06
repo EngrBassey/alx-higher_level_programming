@@ -5,7 +5,6 @@
 
 def matrix_mul(m_a, m_b):
     """multiplys tow matrices and return it"""
-    
     if m_a == [] or m_a == [[]]:
         raise ValueError("m_a can't be empty")
     if m_b == [] or m_b == [[]]:

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This is the "101-lazy_matrix_mul" module.
-The 101-lazy_matrix_mul module supplies one function, lazy_matrix_mul(m_a, m_b).
+The 101-lazy_matrix_mul module supplies one function.
 """
 import numpy as np
 
