@@ -11,8 +11,15 @@ Usage
 ::
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+string to string
+
+::
+    
     >>> say_my_name("Sammy", "Sammy")
     My name is Sammy Sammy
+
+string with white space
 
 ::
 
@@ -39,17 +46,23 @@ a TypeError is raised.
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
+string with lists
+
 ::
 
     >>> say_my_name("Sammy", ["Names", "Age", "No"])
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
+string with mixed types
+
 ::
 
     >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
     Traceback (most recent call last):
     TypeError: first_name must be a string
+
+string of None
 
 ::
 
