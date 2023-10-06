@@ -1,56 +1,74 @@
-The ``3-say_my_name`` module
-============================
+=====
+Usage
+=====
 
-Using ``3-say_my_name``
----------------------
+``say_my_name(...)`` prints "My name is <first_name> <last_name>".
+::
 
-Import module:
-    	>>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-Default Test:
-	>>> say_my_name("Sammy", "Akpan")
-	My name is Sammy Akpan
+string to string
 
-firstname available only:
-	>>> say_my_name("Sammy")
-	My name is Sammy
+::
+    
+    >>> say_my_name("Sammy", "Sammy")
+    My name is Sammy Sammy
 
-lastname empty:
-	>>> say_my_name("Sammy", "")
-	My name is Sammy
+string with white space
 
-both names empty:
-	>>> say_my_name("", "")
-	My name is 
+::
 
-just spaces:
-	>>> say_my_name("   ", "   ")
-	My name is        
+    >>> say_my_name("Sammy Akpan", "Sammy Akpan")
+    My name is Sammy Akpan Sammy Akpan
 
-Test empty firstname:
-	>>> say_my_name("", "Smith")
-	My name is  Smith
+The parameter ```last_name``` is optional. If no last name is provided,
+an empty string is printed instead.
 
-not string arg1:
-    	>>> say_my_name(24, "Smith")
-    	Traceback (most recent call last):
-    	...
-    	TypeError: first_name must be a string
+::
 
-not string arg2:
-    	>>> say_my_name("John", 98)
-    	Traceback (most recent call last):
-    	...
-    	TypeError: last_name must be a string
+    >>> say_my_name("Sammy")
+    My name is Sammy 
 
-not string both arg1 arg2:
-    	>>> say_my_name(12, 98)
-    	Traceback (most recent call last):
-    	...
-    	TypeError: first_name must be a string
+Invalid Names
+=============
 
-Missing 2 args:
-    	>>> say_my_name()
-    	Traceback (most recent call last):
-    	...
-    	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
+a TypeError is raised.
+
+::
+
+    >>> say_my_name(6, "Sammy Akpan")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+string with lists
+
+::
+
+    >>> say_my_name("Sammy", ["Names", "Age", "No"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+string with mixed types
+
+::
+
+    >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+string of None
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+At least one name must be provided.
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
