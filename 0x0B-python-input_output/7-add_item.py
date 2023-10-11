@@ -13,3 +13,7 @@ def main():
         list_args = load_from_json_file("add_item.json") + list_args
 
     save_to_json_file(list_args, "add_item.json")
+
+
+if __name__ == "__main__":
+    main()
