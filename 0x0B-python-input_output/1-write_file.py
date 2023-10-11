@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-
-"""Module to read a file"""
+''' Module for write_file func '''
 
 
 def write_file(filename="", text=""):
-    """functuion to read a file"""
-    with open(filename, 'w', encoding="utf-8") as f:
-        read_data = f.write(text)
-        return(read_data)
+    ''' writes a string to a text file '''
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
