@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 '''Module for BaseGeometry class.'''
 
 
@@ -19,10 +20,8 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """function that inherit base geometry"""
-    
     def __init__(self, width, height):
-        super.__init__(self)
         self.integer_validator("width", width)
-        self.intger_validation("height", height)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
