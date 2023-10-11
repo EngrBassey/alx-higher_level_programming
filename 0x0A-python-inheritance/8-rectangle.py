@@ -1,24 +1,25 @@
 #!/usr/bin/python3
-
-"""Module that raises an exception"""
+'''Module for BaseGeometry class.'''
 
 
 class BaseGeometry:
-    """ function that raises an exception"""
+    '''A BaseGeometry class.'''
 
     def area(self):
-        raise Exception("area() is not implemented")
+        ''' Method that calculates de area '''
+        raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
-        if not isinstance(value, int):
-            raise TypeError("name must be an integer")
+        ''' Method that validates the value '''
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("name must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
     """function that inherit base geometry"""
-
+    
     def __init__(self, width, height):
         super.__init__(self)
         self.integer_validator("width", width)
