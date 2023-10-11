@@ -16,4 +16,3 @@ if __name__ == "__main__":
         my_obj = []
     my_obj.extend(argv[1:])
     save_to_json_file(my_obj, 'add_item.json')
-
