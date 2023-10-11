@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+''' Module for to_json_string func '''
 import json
-''' Module for coverting dict JSON '''
 
 
 def to_json_string(my_obj):
-    ''' json function '''
-    return (json.dumps(my_obj))
+    ''' returns the JSON representation of an object (string) '''
+    return json.dumps(my_obj)
