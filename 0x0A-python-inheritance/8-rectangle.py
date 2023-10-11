@@ -21,7 +21,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         super.__init__(self)
-        self.__width = width
-        self.__height = height
         self.integer_validator("width", width)
         self.intger_validation("height", height)
+        self.__width = width
+        self.__height = height
