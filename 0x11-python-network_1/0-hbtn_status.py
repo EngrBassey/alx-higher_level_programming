@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Module to display body response"""
-
 import urllib.request
 
-with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-    body_res = response.read()
-    utf_8_res = body_res.decode('utf-8')
+url = "https://alx-intranet.hbtn.io/status"
+
+with urllib.request.urlopen(url) as response:
+    content = response.read()
+    utf8_content = content.decode('utf-8')
 
     print("Body response:")
-    print("    - type:", type(body_res))
-    print("    - content:", body_res)
-    print("    - utf8 content:", utf_8_res)
+    print("    - type:", type(content))
+    print("    - content:", content)
+    print("    - utf8 content:", utf8_content)
